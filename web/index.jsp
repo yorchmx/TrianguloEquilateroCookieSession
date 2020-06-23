@@ -44,7 +44,7 @@
                         <td>Nombre: </td>
                         <td>
                             <%if(pedirNombre==true){%>
-                                <input type="text" id="txtNombre" name="txtNombre" placeholder="Ingresa tu nombre" />
+                                <input type="text" id="txtNombre" name="txtNombre" placeholder="Ingresa tu nombre aquí" />
                             <%}
                             else{
                                 out.print("Hola! " + session.getAttribute("nombre").toString());
@@ -101,11 +101,11 @@
             %>
             <tr>
                 <td>Altura: </td>
-                <td> <input type="text" id="txtAltura" name="txtAltura" placeholder="Ingresa la altura" /></td>
+                <td> <input type="text" id="txtAltura" name="txtAltura" placeholder="Ingresa la altura aquí" /></td>
             </tr>
             <tr>
                 <td>Base: </td>
-                <td> <input type="text" id="txtBase" name="txtBase" placeholder="Ingresa la base" /></td>
+                <td> <input type="text" id="txtBase" name="txtBase" placeholder="Ingresa la base aquí" /></td>
             </tr>
             <tr>
                 <td></td>
@@ -120,15 +120,15 @@
                     var base = document.getElementById("txtBase").value;
                     
                     if(altura === "" || base === ""){
-                        alert("Los campos altura y base son requeridos");
+                        alert("Para decirte el Perimetro y el Área del Triangulo Equilatero dime cual es la Altura y la Base juntas.");
                         return false;
                     }
                     else if(isNaN(altura)){
-                        alert("La altura ingresada no es número");
+                        alert("Ingresa un número de los humano por favor");
                         return false;
                     }
                     else if(isNaN(base)){
-                        alert("La base ingresada no es número");
+                        alert("Ingresa un número de los humano por favor");
                     }
                     else{
                         return true;

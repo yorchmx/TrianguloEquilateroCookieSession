@@ -9,14 +9,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Resultado calculado</title>
+        <title>Resultados:</title>
         <%
             String area = request.getAttribute("area").toString();
             String perimetro = request.getAttribute("perimetro").toString();
         %>
     </head>
     <body>
-        <h1>Resultado</h1>
+        <h1>Los resultados son:</h1>
         <form method="post" name="formulario" onsubmit="return validar();" action="index.jsp">
             <table border="0">
                 <tbody>
