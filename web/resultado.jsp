@@ -21,11 +21,11 @@
             <table border="0">
                 <tbody>
                     <tr>
-                        <td>Área: </td>
+                        <td>El Área es de: </td>
                         <td> <%= area %> </td>
                     </tr>
                     <tr>
-                        <td>Perimetro: </td>
+                        <td>El Perimetro es de: </td>
                         <td> <%= perimetro %> </td>
                     </tr>
                     <tr>

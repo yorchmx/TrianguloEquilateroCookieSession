@@ -53,12 +53,12 @@ public class modeloTriangulo extends HttpServlet {
             response.addCookie(k);
             k = new Cookie("base", base);
             response.addCookie(k);
-            k = new Cookie("perimetro",perimetro.toString());
+            k = new Cookie("area",area.toString());
             response.addCookie(k);
-            k = new Cookie("area", area.toString());
+            k = new Cookie("perimetro", perimetro.toString());
             response.addCookie(k);
-            request.setAttribute("perimetro", perimetro.toString());
             request.setAttribute("area", area.toString());
+            request.setAttribute("perimetro", perimetro.toString());
             request.getRequestDispatcher("/resultado.jsp").forward(request, response);
         }
     }

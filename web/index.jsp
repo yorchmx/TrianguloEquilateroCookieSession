@@ -19,7 +19,7 @@
             boolean hayCookie = false;
         %>
         <%
-            /*Checamos si hay valores en la sesion*/
+            /*Se valida si hay valores en la sesion*/
             HttpSession sesion = request.getSession(false);
             Enumeration e=sesion.getAttributeNames();
             if(e.hasMoreElements()){
@@ -28,7 +28,7 @@
             else{
                 pedirNombre=true;
             }
-            /*Checamos si hay cookies*/
+            /*Validamos si hay cookies*/
             Cookie k[]=request.getCookies();
             if(k!=null){
                 hayCookie = true;
@@ -47,7 +47,7 @@
                                 <input type="text" id="txtNombre" name="txtNombre" placeholder="Ingresa tu nombre" />
                             <%}
                             else{
-                                out.print("Hola " + session.getAttribute("nombre").toString());
+                                out.print("Hola! " + session.getAttribute("nombre").toString());
                             }
                             %>
                         </td>
@@ -59,7 +59,7 @@
                     <%if(k[i].getName().equals("base")){%>
                     <tr>
                         <td>
-                            Base anterior:
+                            La Base anterior fue:
                         </td>
                         <td>
                             <% out.print(k[i].getValue()); %>
@@ -69,7 +69,7 @@
                     <%if(k[i].getName().equals("altura")){%>
                     <tr>
                         <td>
-                            Altura anterior:
+                            La Altura anterior fue:
                         </td>
                         <td>
                             <% out.print(k[i].getValue()); %>
@@ -79,7 +79,7 @@
                     <%if(k[i].getName().equals("area")){%>
                     <tr>
                         <td>
-                            Área anterior:
+                            El Área anterior fue:
                         </td>
                         <td>
                             <% out.print(k[i].getValue()); %>
@@ -89,7 +89,7 @@
                     <%if(k[i].getName().equals("perimetro")){%>
                     <tr>
                         <td>
-                            Perimetro anterior:
+                            El Perimetro anterior fue:
                         </td>
                         <td>
                             <% out.print(k[i].getValue()); %>
